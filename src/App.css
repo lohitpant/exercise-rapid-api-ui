@@ -12,3 +12,13 @@ body{
 ::-webkit-scrollbar{
     width: 0px;
 }
+
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 550px;
+  height: 750px;
+  /* margin-top: 10px; */
+}
+  
