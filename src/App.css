@@ -1,16 +1,18 @@
-body{
-    font-family: 'Josefin Sans';
-    background-color: #FFFAFB;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #FFFAFB;
 }
 
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
-    width: 0px;
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 .hero-banner-img {
@@ -21,4 +23,3 @@ body{
   height: 750px;
   /* margin-top: 10px; */
 }
-  
