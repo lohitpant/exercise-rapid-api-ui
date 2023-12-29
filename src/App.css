@@ -72,9 +72,30 @@ body {
 }
 
 .right-arrow,
-.left-arrow{
+.left-arrow {
   position: static !important;
 }
+
+.exercise-card {
+  width: 400px;
+  height: 445px;
+  background: #fff;
+  border-top: 4px solid #FF2625;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+  height: 326px;
+}
+
+
 
 @media screen and (max-width:1200px) {
   .hero-banner-img {
@@ -85,10 +106,20 @@ body {
   .hero-banner-br {
     display: block;
   }
+
+  .exercise-card {
+    width: 320px;
+  }
 }
 
 @media screen and (max-width:920px) {
   .hero-banner-img {
     display: none;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .exercise-card {
+    width: 280px;
   }
 }
