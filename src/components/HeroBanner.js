@@ -13,7 +13,7 @@ const HeroBanner = () => {
                 And Repeat
             </Typography>
             <Typography fontSize="22px" lineHeight="35px">
-                Check out the most effective exercises personalized to you
+                Check out the most effective exercises <br className='hero-banner-br'/> personalized to you
             </Typography>
             <Button variant='contained' color='error' href='#exercises' sx={{
                 backgroundColor: '#ff2625', padding: '10px', mt: '10px'
