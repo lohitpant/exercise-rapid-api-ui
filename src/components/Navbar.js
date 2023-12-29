@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <Stack direction='row' justifyContent='space-around' sx={{gap:{
+        <Stack className='navbar-container' direction='row' justifyContent='space-around' sx={{gap:{
             sm:'122px', xs:'40px'
         }, mt:{sm:'20px', xs:'10px'}, justifyContent:'none'}} px='20px'>
             <Link to='/'>
