@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { fetchData, exerciseOptions } from '../utils/fetchData'
 import HorizontalScrollbar from './HorizontalScrollbar';
 
-const EXERCISE_URL = 'https://exercisedb.p.rapidapi.com/exercises';
+const EXERCISE_URL = 'https://exercisedb.p.rapidapi.com/exercises?limit=70';
 const BODY_PARTS_URL = 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList';
 
 const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
@@ -17,7 +17,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
       setBodyParts(['all', ...bodyPartsData])
       console.log(...bodyPartsData);
     }
-    // fetchExerciseData()
+    fetchExerciseData()
   }, [])
 
   const handleSearch = async () => {
@@ -36,7 +36,6 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
       setSearch('')
       setExercises(searchedExercises)
     }
-    // console.log(search);
   }
 
   return (
