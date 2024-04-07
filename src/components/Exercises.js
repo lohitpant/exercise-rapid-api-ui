@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import { Box, Pagination, Stack, Typography } from "@mui/material";
 import ExerciseCard from "./ExerciseCard";
 
+const EXERCISE_URL = 'https://exercisedb.p.rapidapi.com/exercises?limit=70';
+
 const Exercises = ({ setExercises, bodyPart, exercises }) => {
-  console.log(exercises);
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -21,17 +22,34 @@ const Exercises = ({ setExercises, bodyPart, exercises }) => {
     setCurrentPage(value);
     window.scrollTo({ top: 1800, behavior: "smooth" });
   };
+
+  useEffect(()=>{
+    const fetchExercisesData=async()=>{
+      let exercisesData=[];
+      if(bodyPart==='all'){
+        exercisesData=await fetchData(EXERCISE_URL, exerciseOptions);
+      } else{
+        exercisesData=await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=70`,
+         exerciseOptions);
+      }
+      console.log(exercisesData);
+      setExercises(exercisesData)
+    }
+
+    fetchExercisesData()
+  },[bodyPart])
+
   return (
     <Box
       id="exercises"
       sx={{
-        mt: { lg: "110px" },
+        mt: { lg: "20px" },
       }}
-      mt="50px"
+      mt="20px"
       p="20px"
     >
       {currentExercises.length > 0 && (
-          <Typography variant="h4" mb="46px" textAlign="center">
+          <Typography variant="h4" mb="40px" textAlign="center">
             Showing Results
           </Typography>
         )}
@@ -47,7 +65,7 @@ const Exercises = ({ setExercises, bodyPart, exercises }) => {
           return <ExerciseCard key={index} exercise={exercise} />;
         })}
       </Stack>
-      <Stack mt="100px" alignItems="center">
+      <Stack mt="50px" alignItems="center">
         {exercises.length > 9 && (
           <Pagination
             color="standard"

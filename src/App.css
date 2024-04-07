@@ -17,10 +17,10 @@ body {
 
 .hero-banner-img {
   position: absolute;
-  right: 40px;
+  right: 60px;
   top: 0px;
-  width: 530px;
-  height: 720px;
+  width: 450px;
+  height: 620px;
   /* margin-top: 10px; */
 }
 
@@ -99,8 +99,8 @@ body {
 
 @media screen and (max-width:1200px) {
   .hero-banner-img {
-    width: 400px;
-    height: 530px;
+    width: 360px;
+    height: 500px;
   }
 
   .hero-banner-br {
