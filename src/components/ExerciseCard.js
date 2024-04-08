@@ -9,7 +9,7 @@ const ExerciseCard = ({ exercise }) => {
       <Stack direction="row">
         <Button
           sx={{
-            ml: "21px",
+            ml: "10px",
             color: "#fff",
             background: "#ffa9a9",
             fontSize: "14px",

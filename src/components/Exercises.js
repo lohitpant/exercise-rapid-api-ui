@@ -56,7 +56,7 @@ const Exercises = ({ setExercises, bodyPart, exercises }) => {
       <Stack
         direction="row"
         sx={{
-          gap: { lg: "110px", xs: "50px" },
+          gap: { lg: "90px", xs: "40px" },
         }}
         flexWrap="wrap"
         justifyContent="center"
