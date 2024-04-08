@@ -52,16 +52,16 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       >
         Awesome Exercises You <br /> Should Know
       </Typography>
-      <Box position="relative" mb="72px">
+      <Box position="relative" mb="70px">
         <form onSubmit={handleSearch}>
           <TextField
             sx={{
               input: { fontWeight: "600", fontSize: "18px" },
-              width: { lg: "800px", xs: "350px" },
+              width: { lg: "700px", xs: "330px" },
               backgroundColor: "fff",
               borderRadius: "40px",
+              height:"50px",
             }}
-            height="76px"
             value={search}
             onChange={(e) => {
               setSearch(e.target.value.toLowerCase());

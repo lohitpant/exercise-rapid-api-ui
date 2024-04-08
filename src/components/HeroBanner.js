@@ -4,20 +4,19 @@ import HeroBannerImage from "../assets/images/banner.png";
 
 const HeroBanner = () => {
   return (
-    <Box sx={{ mt: { lg: "40px", xs: "20px" }, ml: { sm: "50px" } }} p="20px">
-      <Typography color="#FF2625" fontWeight="600" fontSize="30px">
+    <Box sx={{ mt: { lg: "38px", xs: "20px" }, ml: { sm: "50px" } }} p="20px">
+      <Typography color="#FF2625" fontWeight="600" fontSize="26px">
         Fitness Club
       </Typography>
       <Typography
         fontWeight={700}
-        sx={{ fontSize: { lg: "44px", xs: "40px" } }}
-        mb="23px"
-        mt="20px"
+        sx={{ fontSize: { lg: "40px", xs: "35px" } }}
+        margin="20px 0px"
       >
         Sweat, Smile <br />
         And Repeat
       </Typography>
-      <Typography fontSize="22px" lineHeight="35px">
+      <Typography fontSize="20px" lineHeight="30px">
         Check out the most effective exercises <br className="hero-banner-br" />{" "}
         personalized to you
       </Typography>
@@ -27,7 +26,7 @@ const HeroBanner = () => {
         href="#exercises"
         sx={{
           backgroundColor: "#ff2625",
-          padding: "10px",
+          padding: "6px 18px",
           mt: "20px",
         }}
       >
@@ -40,7 +39,7 @@ const HeroBanner = () => {
           opacity: "0.1",
           mt: "30px",
           display: { lg: "block", xs: "none" },
-          fontSize: "200px",
+          fontSize: "190px",
           userSelect: "none",
         }}
       >
