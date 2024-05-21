@@ -57,13 +57,15 @@ const Detail = ({ exerciseDetail }) => {
               <Button
                 sx={{
                   borderRadius: "50%",
-                  width:'70px',
-                  height:'70px'
+                  width:'80px',
+                  height:'80px',
+                  backgroundColor:'#fff2db',
+                  cursor:'inherit'
                 }}
               >
-                <img src={item.icon} alt={item.name} />
+                <img src={item.icon} alt={item.name} style={{width:'50px', height:'50px'}} />
               </Button>
-              <Typography variant="h6">{item.name}</Typography>
+              <Typography variant="h6" sx={{textTransform:'capitalize'}}>{item.name}</Typography>
             </Stack>
           );
         })}
