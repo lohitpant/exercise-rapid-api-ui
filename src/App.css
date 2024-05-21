@@ -19,9 +19,9 @@ body {
   position: absolute;
   right: 60px;
   top: 0px;
-  width: 450px;
-  height: 620px;
-  /* margin-top: 10px; */
+  width: 420px;
+  height: 540px;
+  object-fit: contain;
 }
 
 .hero-banner-br {
@@ -35,12 +35,15 @@ body {
 
 .bodyPart-card {
   transform: scale(1, 1);
-  transition: 0.3s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
-
-.exercise-card:hover,
-.bodyPart-card:hover {
+.bodyPart-card:hover{
+  transform: scale(1, 1);
+  border-top: 4px solid #FF2625;
+}
+.exercise-card:hover{
   transform: scale(1.1, 1.1);
+  border-top: 4px solid #FF2625;
 }
 
 .right-arrow,
@@ -62,6 +65,12 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
+.react-horizontal-scrolling-menu--wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .right-arrow {
   right: 140px;
 }
@@ -77,10 +86,9 @@ body {
 }
 
 .exercise-card {
-  width: 400px;
-  height: 445px;
+  width: 320px;
+  height: 350px;
   background: #fff;
-  border-top: 4px solid #FF2625;
   border-bottom-left-radius: 20px;
   text-decoration: none;
   display: flex;
@@ -92,15 +100,33 @@ body {
 }
 
 .exercise-card img {
-  height: 326px;
+  height: 300px;
 }
 
+.detail-image {
+  width: 500px;
+  height: 540px;
+}
 
+.search-btn:hover {
+  color: #FF2625 !important;
+  border: 1px solid #FF2625 !important;
+}
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
+}
 
 @media screen and (max-width:1200px) {
   .hero-banner-img {
-    width: 360px;
-    height: 500px;
+    width: 340px;
+    height: 460px;
+    object-fit: contain;
   }
 
   .hero-banner-br {
@@ -109,6 +135,25 @@ body {
 
   .exercise-card {
     width: 320px;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    position: static !important;
+  }
+
+  .detail-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  }
+
+  .exercise-video {
+    width: 320px;
+    height: 300px;
   }
 }
 
